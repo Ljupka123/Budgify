@@ -927,7 +927,7 @@ canvas {
 
 body.dark-theme header {
   background-color: #9FB8B1;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 body.dark-theme header .nav .nav-item span,
 body.dark-theme header .user-actions .user span {
