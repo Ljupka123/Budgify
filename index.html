@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budgify</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/flaticon.ico">
+</head>
+<body>
+  <header class="logo main-padding">
+  <a href="#" id="logo">
+    <img src="img/logo-header.svg" id="logo-img" class="logos" height="100" width="150">
+  </a>
+
+  <nav class="nav">
+    <a href="#" class="nav-item home-item active" id="home" data-target="home">
+      <img src="img/home.svg" alt="Home" class="nav-icon" width="35" height="35">
+      <span>Home</span> 
+    </a>
+
+    <a href="#" class="nav-item dashboard-item" id="dashboard" data-target="dashboard">
+      <img src="img/dashboard.svg" alt="Dashboard" class="nav-icon" width="35" height="35">
+      <span>Dashboard</span>
+    </a>
+
+    <a href="#" class="nav-item overview-item" id="overview" data-target="overview">
+      <img src="img/overview.svg" alt="Overview" class="nav-icon" width="35" height="35">
+      <span>Overview</span>
+    </a>
+
+    <a href="#" class="nav-item summary-item" id="summary" data-target="summary">
+      <img src="img/summary.svg" alt="Summary" class="nav-icon" width="35" height="35">
+      <span>Today's Summary</span>
+    </a>
+  </nav>
+
+  <button class="burger-btn" aria-label="Open menu">
+  <img src="img/burger-btn.svg" alt="Menu">
+</button>
+
+  <button class="toggle-theme" aria-label="Toggle Theme">
+    <img src="img/toggle-button.svg" class="toggle-btn" alt="toggle button" width="35" height="35">
+  </button>
+
+  <div class="user-actions">
+    <button class="user" id="loginBtn">
+      <img src="img/user.svg" alt="User" class="user-icon" width="35" height="35">
+      <span>Login</span>
+    </button>
+    <button class="user" id="signupBtn">
+      <span>Signup</span>
+    </button>
+  </div>
+</header>
+
+  <div id="authFormContainer" class="auth-form-container hidden">
+    <div class="auth-form">
+      <span id="closeForm" class="close">&times;</span>
+      <h2 id="formTitle">Login</h2>
+      <input type="email" id="emailInput" placeholder="Email">
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button id="submitBtn">Submit</button>
+    </div>
+  </div>
+
+
+
+  <main>
+    <!--HOME PAGE-->
+  <section class="landing-page main-padding" id="home-section">
+    <div class="hero">
+      <h1>Take control of your money</h1>
+      <img class="hero-img" src="img/hero-img.jpeg" alt="hero">
+      <button id="startBtn">Get Started Free</button>
+    </div>
+
+    <div class="features">
+      <div class="features-row">
+        <div class="feature">
+          <h3>Track Expenses</h3>
+          <p>Understand where your money goes.</p>
+          <img src="img/success.jpg" alt="success">
+        </div>
+        <div class="feature">
+          <h3>Set Goals</h3>
+          <p>Stay focused on saving.</p>
+          <img src="img/coins.jpg" alt="coins">
+        </div>
+      </div>
+    </div>
+
+    <section class="motivation">
+      <div class="image-container">
+        <img src="img/hero-img2.webp" alt="Finance growth" class="bg-image">
+        <div class="text-overlay">
+          <p>See everything at a glance.</p>
+          <button id="secondaryStartBtn">Get Started Free</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <h2>We listen to our users, and you should too!</h2>
+
+      <div class="testimonial-slider-wrapper">
+        <div class="testimonial-slider">
+          <div class="testimonial-card"><p>"Saved $500 in 2 months!"</p><h4>- Alice M.</h4></div>
+          <div class="testimonial-card"><p>"Budgeting made easy."</p><h4>- John D.</h4></div>
+          <div class="testimonial-card"><p>"Finally understand my expenses."</p><h4>- Maria K.</h4></div>
+          <div class="testimonial-card"><p>"Love tracking every dollar."</p><h4>- Tom S.</h4></div>
+          <div class="testimonial-card"><p>"Helps me plan my savings."</p><h4>- Lisa P.</h4></div>
+          <div class="testimonial-card"><p>"Best budgeting tool ever."</p><h4>- Eric L.</h4></div>
+          <div class="testimonial-card"><p>"Easy to use and effective."</p><h4>- Nina R.</h4></div>
+          <div class="testimonial-card"><p>"My finances are finally organized."</p><h4>- Sam W.</h4></div>
+          <div class="testimonial-card"><p>"Highly recommend for saving."</p><h4>- Olivia T.</h4></div>
+        </div>
+      </div>
+
+      <button class="prev"><img src="img/arrow-left.svg" alt="Previous" /></button>
+      <button class="next"><img src="img/arrow-right.svg" alt="Next" /></button>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><h2 class="count" data-target="10000">0</h2><p>Users saved</p></div>
+      <div class="stat"><h2 class="count" data-target="500000">0</h2><p>Dollars collectively</p></div>
+    </section>
+
+    <div class="motivational-quotes main-padding">
+      <div class="daily-thought-container main-padding">
+        <span>Wealth Wisdom</span>
+        <p>"Small steps today, big freedom tomorrow.”</p>
+        <div class="daily-thought-icons">
+          <img src="img/refresh.svg" alt="refresh" width="25" height="25" id="refreshImg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+<!--DASHBOARD-->
+
+  <section class="dashboard main-padding" id="dashboard-section" style="display:none;">
+    <div class="calculator-section">
+      <label for="income">Income:</label>
+      <input type="number" id="income" placeholder="Enter your income">
+    </div>
+
+    <div class="tables-wrapper">
+      <div class="calculator-section">
+        <h3>Fixed Expenses</h3>
+        <table id="fixed-expenses-table">
+          <thead>
+            <tr><th>Expense</th><th>Amount</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="add-fixed-expense">Add Fixed Expense</button>
+      </div>
+
+      <div class="calculator-section">
+        <h3>Variable Expenses</h3>
+        <table id="variable-expenses-table">
+          <thead>
+            <tr><th>Expense</th><th>Amount</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="add-variable-expense">Add Variable Expense</button>
+      </div>
+    </div>
+
+    <div class="calculator-section savings">
+      <h3>Savings</h3>
+      <p id="savings-output">Savings: $0 (0%)</p>
+    </div>
+  </section>
+
+
+
+    <!--OVERVIEW-->
+
+  <section class="overview main-padding" id="overview-section" style="display:none;">
+    <div class="charts">
+      <canvas id="pie-chart" width="300" height="300"></canvas>
+      <canvas id="bar-chart" width="350" height="300"></canvas>
+    </div>
+  </section>
+
+  
+   <!--SUMMARY-->
+
+  <section class="summary main-padding" id="summary-section" style="display:none;">
+    <p id="summary-income">Income: $0</p>
+    <p id="summary-fixed">Fixed: $0</p>
+    <p id="summary-variable">Variable: $0</p>
+    <p id="summary-savings">Savings: $0 (0%)</p>
+
+    <div class="financial-report">
+      <h3>Financial Report</h3>
+      <p id="report-income"></p>
+      <p id="report-expenses"></p>
+      <p id="report-savings"></p>
+      <p id="report-percentage"></p>
+      <p id="report-status"></p>
+    </div>
+  </section>
+</main>
+
+
+
+  <footer class="footer main-padding">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-left">
+          <img src="img/logo-header.svg" alt="logo" id="main-logo" class="logos">
+             <div class="social-icons">
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/Linkedin.png" alt="LinkedIn"></a>
+             </div>
+      </div>
+            <div class="footer-middle">
+                    <div class="footer-links">
+                    <a href="#" class="footer-data">Privacy Policy</a>
+                    <a href="#" class="footer-data">Terms of Service</a>
+                    <a href="#" class="contact-link">About Us</a>         
+            </div>
+            </div>
+            <div class="footer-right">
+              <div class="contact">
+                <a href="#" class="contact-link">Newsletter "Get Budgeting Tips"</a>
+                <a href="#" class="contact-link">Budget Templates</a>
+                <a href="#" class="contact-link">FAQ</a>
+            </div>
+            </div>
+            </div>
+        <div class="footer-bottom">
+            <p class="copyright">© All Rights Reserved Budgify 2026</p>
+        </div>
+    </div>
+</footer>
+  <script src="main.js"></script>
+</body>
+</html>

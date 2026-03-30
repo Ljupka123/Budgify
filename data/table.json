@@ -1,0 +1,24 @@
+{
+  "income": [
+    "Monthly Salary",
+    "Other Income"
+  ],
+  "fixedExpenses": [
+    "Rent",
+    "Electricity",
+    "Car Insurance",
+    "Internet",
+    "Phone/Mobile",
+    "Subscriptions (Netflix/Amazon...)",
+    "Legal Protection Insurance",
+    "Accident Insurance",
+    "Household & Glass Insurance"
+  ],
+  "variableExpenses": [
+    "Food/Groceries",
+    "Cosmetics/Personal Care",
+    "Fuel/Gas",
+    "Going Out/Entertainment",
+    "Other Variable Costs"
+  ]
+}

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-ExtraBold.woff2);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-ExtraLight.woff2);
+  font-weight: 200;
+}
+
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-Light.woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SourceSerif4";
+  src: url(../fonts/SourceSerif4-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(../fonts/Lora-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(../fonts/Lora-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(../fonts/Lora-Regular.woff2);
+  font-weight: 400;
+}
+
+
+//Fonts
+$font-sourceserif4: "SourceSerif4";
+$font-lora: "Lora";
+
+//Breakpoints
+$grid-breakpoints:("xs": 420px,
+  "s":560px,
+  "m": 768px,
+  "l": 1024px,
+  "xl": 1200px);
+
+//Colors
+$color-light-pink: #DBBCAD;
+$color-pink: #A65967;
+$color-light-green: #C3D1B0;
+$color-teal: #9FB8B1;
+$color-light-blue: #e7f0ff;
+$color-dark-blue: #1A5A6B;
+$color-beige: #D7BA96;
+$color-black: #1D0B0E;
+$color-mint-white: #F6FDF9;
+$color-white: #FFFFFF;
