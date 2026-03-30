@@ -807,6 +807,48 @@ header .user-actions .user span {
   background-color: #C3D1B0;
 }
 
+.amount-cell {
+  position: relative;
+}
+
+.amount-input {
+  width: 100%;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.amount-cell:hover .delete-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.delete-icon:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+@media (max-width: 1023.98px) {
+  .amount-cell {
+    position: relative;
+  }
+  .delete-icon {
+    right: 35px;
+    top: 50%;
+    transform: translateY(calc(-100% - 3px));
+    width: 14px;
+    height: 14px;
+  }
+}
 .savings {
   margin-top: 50px;
   background-color: #F6FDF9;
@@ -936,6 +978,14 @@ body.dark-theme header .user-actions .user span {
 body.dark-theme header .toggle-theme .toggle-btn {
   transform: rotate(180deg);
 }
+@media (max-width: 1023.98px) {
+  body.dark-theme .nav span {
+    color: #1A5A6B !important;
+  }
+  body.dark-theme .user-actions span {
+    color: #1A5A6B !important;
+  }
+}
 body.dark-theme main .landing-page,
 body.dark-theme main .hero,
 body.dark-theme main .features,
@@ -990,6 +1040,43 @@ body.dark-theme main button {
 body.dark-theme main button:hover {
   background-color: #FFFFFF;
   color: #A65967;
+}
+body.dark-theme .amount-cell {
+  position: relative;
+}
+body.dark-theme .amount-input {
+  width: 100%;
+}
+body.dark-theme .delete-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+body.dark-theme .amount-cell:hover .delete-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.dark-theme .delete-icon:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+@media (max-width: 1023.98px) {
+  body.dark-theme .amount-cell {
+    position: relative;
+  }
+  body.dark-theme .delete-icon {
+    right: 35px;
+    top: 50%;
+    transform: translateY(calc(-100% - 3px));
+    width: 14px;
+    height: 14px;
+  }
 }
 body.dark-theme .overview {
   background-color: #9FB8B1;

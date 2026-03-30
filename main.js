@@ -287,14 +287,23 @@ fetch("data/table.json")
 
   });
 
-  function addRow(tbody, value = "") {
+function addRow(tbody, value = "") {
 
   const tr = document.createElement("tr");
 
   tr.innerHTML = `
-    <td><input type="text" value="${value}"></td>
-    <td><input type="number" placeholder="0"></td>
+    <td>
+      <input type="text" value="${value}">
+    </td>
+    <td class="amount-cell">
+      <input type="number" placeholder="0" class="amount-input">
+      <img src="img/delete.svg" class="delete-icon" alt="delete">
+    </td>
   `;
+
+  tr.querySelector(".delete-icon").addEventListener("click", () => {
+    tr.remove();
+  });
 
   tbody.appendChild(tr);
 

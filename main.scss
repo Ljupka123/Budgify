@@ -824,6 +824,53 @@ text-align: center;
   }
 }
 
+.amount-cell {
+  position: relative;
+}
+
+.amount-input {
+  width: 100%;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 14px;
+
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.amount-cell:hover .delete-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.delete-icon:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+@include media-down (l) {
+  .amount-cell {
+    position: relative;
+    
+  }
+
+  .delete-icon {
+   right: 35px; 
+    top: 50%;
+    transform: translateY(calc(-100% - 3px));
+    width: 14px;
+    height: 14px;
+  }
+}
 .savings {
   margin-top: 50px;
   background-color: $color-mint-white;
@@ -974,7 +1021,19 @@ body.dark-theme {
       transform: rotate(180deg);
     }
   }
-
+ 
+@include media-down(l) {
+ .nav {
+span {
+color: $color-dark-blue !important;
+}
+}
+.user-actions {
+span {
+color: $color-dark-blue !important; 
+}
+}
+}
   main {
     .landing-page,
     .hero,
@@ -1042,6 +1101,56 @@ body.dark-theme {
       }
     }
   }
+
+.amount-cell {
+  position: relative;
+}
+
+.amount-input {
+  width: 100%;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 14px;
+
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.amount-cell:hover .delete-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.delete-icon:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+@include media-down (l) {
+  .amount-cell {
+    position: relative;
+    
+  }
+
+  .delete-icon {
+   right: 35px; 
+    top: 50%;
+    transform: translateY(calc(-100% - 3px));
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
 
  .overview {
   background-color: $color-teal;
